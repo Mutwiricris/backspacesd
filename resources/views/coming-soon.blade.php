@@ -53,7 +53,7 @@
                             <input type="email" class="input-newsletter" placeholder="Enter your email address" name="EMAIL" required autocomplete="off">
 
                             <button type="submit" class="default-btn btn-bg1">
-                                Subscribe Now
+                                Subscribe Today
                             </button>
                             <div id="validator-newsletter" class="form-result"></div>
                         </form>
@@ -62,7 +62,6 @@
             </div>
         </div>
     </div>
-    <!-- End Coming Soon Area -->
 
     <!--=== Link Of JS ===-->
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
