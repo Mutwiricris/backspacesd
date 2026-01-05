@@ -1,0 +1,601 @@
+$optional-color-1 : #40D298;
+$color-white: #ffffff;
+$dark-color: #1d1d1d;
+$bg-color: #252525;
+$card-bg: #0e0e0e;
+
+.switch-box {
+    position: fixed;
+    bottom: 15px;
+    right: 120px;
+    z-index: 9999;
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        border: 1.5px solid $color-white;
+        transition: 0.4s;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 25px;
+            width: 25px;
+            left: 0px;
+            bottom: 4px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            transition: 0.4s;
+            box-shadow: 0 0px 15px #2020203d;
+            background: white url('../images/night.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.round {
+            border-radius: 34px;
+            &::before {
+                border-radius: 50%;
+            }
+        }
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 30px;
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    input:checked + .slider {
+        background-color: transparent;
+        border: 1.5px solid $optional-color-1;
+    }
+      
+    input:focus + .slider {
+        box-shadow: 0 0 1px $optional-color-1;
+    }
+      
+    input:checked + .slider:before {
+        transform: translateX(24px);
+        background: white url('../images/sunny.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.theme-dark {
+    $main-color: #ffffff;
+    $paragraph-color: #ffffff;
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-white; 
+    }
+    h3 {
+        color: $color-white; 
+        a {
+            color: $color-white !important;
+            transition: 0.7s;
+        }
+        &:hover {
+            color: $optional-color-1;
+            a {
+                color: $optional-color-1 !important;
+            }
+        }
+    }
+    p {
+        color: $color-white; 
+    }
+    body {
+        background: $dark-color;
+        color: $color-white; 
+    }
+    .main-nav {
+        nav {
+            .navbar-nav  {
+                .nav-item {
+                    a {
+                        color: $color-white;
+                        i {
+                            color: $color-white;
+                        }
+                        &:hover {
+                            color: $optional-color-1;
+                        }
+                    }
+                    .dropdown-menu {
+                        background-color: $bg-color !important;
+                        li {
+                            a {
+                                color: $color-white !important;
+                                &.active {
+                                    color: $optional-color-1 !important;
+                                }
+                                &:hover {
+                                    color: $optional-color-1 !important;
+                                }
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+    }
+    .nav-two {
+        background-color: $bg-color;
+    }
+    .nav-three {
+        background-color: $card-bg;
+    }
+    .side-nav-responsive {
+        .dot-menu {
+            .circle-inner {
+                .circle {
+                    background-color: $color-white;
+                }
+            }
+        }
+    }
+    .mean-container {
+        a {
+            &.meanmenu-reveal {
+                color: $color-white !important;
+                span {
+                    background-color: $color-white !important;
+                }
+            }
+        }
+        .mean-bar {
+            background-color: $card-bg;
+        }
+        .navbar-nav {
+            background-color: $card-bg;
+        }
+        .mean-nav {
+            ul {
+                li {
+                    a {
+                        color: $color-white;
+                    }
+                    .dropdown-menu {
+                        background-color: $dark-color;
+                    }
+                }
+            }
+        }
+    }
+    .banner-area {
+        &:before {
+            background-color: $card-bg;
+            opacity: 0.9;
+        }
+        .play-btn-area {
+            .play-btn-area-into {
+                background: $dark-color;
+            }
+            &:hover {
+                .play-btn-area-into {
+                    .play-btn {
+                        background-color: $main-color;
+                        color: $dark-color;
+                        &::before {
+                            background-color: $main-color;
+                        }
+                        &::after {
+                            background-color: $main-color;
+                        }
+                    }
+                }
+                .title {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+    .banner-bottom {
+        .banner-bottom1 {
+            display: none;
+        }
+        .banner-bottom2 {
+            display: inline-block;
+        }
+    }
+    .banner-slider-bg {
+        background-image: none;
+        background-color: $card-bg;
+    }
+    .banner-slider-img {
+        .banner-slider-img-sub {
+            background-color: $bg-color;
+        }
+    }
+    .banner-slider-two-content {
+        &::before {
+            background-color: $bg-color;
+        }
+    }
+    .banner-slider-two-img {
+        .banner-slider-two-sub {
+            &::before {
+                background-color: $card-bg;
+            }
+        }
+    }
+    .banner-slider-shape {
+        display: none;
+    }
+    .banner-slider-two-item {
+        background-color: $bg-color;
+    }
+    .inner-banner {
+        &::before {
+            background-color: $card-bg;
+        }
+    }
+    .what-did-content {
+        .what-did-profile {
+            background-color: $bg-color;
+        }
+    }
+    .what-did-left-card {
+        background-color: $bg-color;
+    }
+    .services-item {
+        background-color: $bg-color;
+    }
+    .services-another-content {
+        background-color: $bg-color;
+    }
+    .services-bottom-img {
+        .services-bottom-sub {
+            background-color: $bg-color;
+        }
+    }
+    .team-item {
+        background-color: $bg-color;
+    }
+    .case-studies-list {
+        background-color: $bg-color;
+        &:hover {
+            h3 {
+                a {
+                    color: $optional-color-1;
+                }
+                color: $optional-color-1;
+            }
+            p {
+                color: $optional-color-1;
+            }
+            i {
+                background-color: $optional-color-1 !important;
+                color: $color-white !important;
+            }
+        }
+    }
+    .choose-right {
+        .content {
+            &::before {
+                background-color: $card-bg;
+            }
+        }
+    }
+    .timeline {
+        ol {
+            li {
+                .time-line-top {
+                    color: $color-white;
+                }
+                .time-line-bottom {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    .timeline-vertical {
+        ol {
+            li {
+                .content {
+                    .time-content {
+                        h3 {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact-form {
+        .form-group {
+            label {
+                color: $color-white;
+            }
+            .form-control {
+                background-color: $card-bg;
+                color: $color-white;
+            }
+        }
+        .agree-label {
+            label {
+                color: $color-white;
+                a {
+                    &:hover {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+    .contact-form .form-group .form-control::-webkit-input-placeholder {
+        color: $main-color;
+    }
+    .contact-form .form-group .form-control:-ms-input-placeholder {
+        color: $main-color;
+    }
+    .contact-form .form-group .form-control::-ms-input-placeholder {
+        color: $main-color;
+    }
+    .contact-form .form-group .form-control::placeholder {
+        color: $main-color;
+    }
+    .user-form, .user-form-two  {
+        .contact-form {
+            background-color: $bg-color;
+        }
+    }
+    .faq-bg {
+        background-color: $card-bg;
+        background-image: none;
+    }
+    .faq-shape {
+        display: none;
+    }
+    .faq-img-three {
+        &::before {
+            background-color: $dark-color;
+        }
+    }
+    .faq-accordion {
+        .accordion {
+            .accordion-item {
+                background-color: #393939;
+                .accordion-title {
+                    background-color: #393939;
+                    color: $color-white;
+                    i {
+                        color: $color-white;
+                    }
+                }
+                .accordion-content {
+                    color: $color-white;
+                    background-color: #393939;
+                }
+            }
+        }
+    }
+    .brand-bg {
+        background-color: $card-bg;
+    }
+    .brand-bg3 {
+        background-color: $dark-color;
+    }
+    .brand-bg2 {
+        background-color: $bg-color;
+        background-image: none;
+    }
+    .testimonials-another-item {
+        background-color: $card-bg;
+    }
+    .testimonials-widget-area {
+        background-color: $bg-color;
+    }
+    .testimonials-widget-item {
+        span {
+            color: $color-white;
+        }
+        p {
+            background-color: $card-bg;
+        }
+    }
+    .blog-article {
+        .section-title {
+            ul {
+                li {
+                    color: $color-white;
+                }
+            }
+        }
+        .article-content {
+            ul {
+                li {
+                    a {
+                        background-color: $bg-color;
+                        color: $color-white;
+                        &:hover {
+                            background-color: $optional-color-1;
+                        }
+                    }
+                }
+            }
+        }
+        .blockquote {
+            background-color: $bg-color;
+            p {
+                color: $color-white;
+            }
+        }
+        .comments-wrap {
+            .comment-form {
+                li {
+                    .top-content {
+                        span {
+                            color: $color-white;
+                        }
+                    }
+                    .content {
+                        h4 {
+                            a {
+                                color: $color-white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .comments-form {
+            .contact-form {
+                background-color: transparent;
+                .form-group {
+                    label {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+    .search-widget {
+        .search-form {
+            .form-control {
+                background-color: $bg-color;
+                color: $color-white;
+            }
+        }
+    }
+    .side-bar-widget {
+        background-color: transparent;
+        .title {
+            color: $color-white;
+        }
+        .widget-popular-post {
+            .item {
+                .info {
+                    .title-text {
+                        a {
+                            color: $main-color;
+                            &:hover {
+                                color: $optional-color-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .side-bar-categories {
+            ul {
+                li {
+                    a {
+                        color: $color-white;
+                        &:hover {
+                            color: $optional-color-1;
+                        }
+                    }
+                }
+            }
+        }
+        .side-bar-widget-tag {
+            li {
+                transition: 0.7s;
+                color: $paragraph-color;
+                a {
+                    color: $paragraph-color;
+                }
+                &:hover a {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    .error-area {
+        .error-content {
+            h3 {
+                margin-top: 25px;
+                color: $color-white;
+            }
+        }
+    }
+    .coming-soon-area {
+        background-color: $dark-color;
+    }
+    .coming-soon-area {
+        .coming-soon-content {
+            background-color: $card-bg;
+            h1 {
+                color: $color-white;
+            }
+            p {
+                color: $color-white;
+            }
+            #timer {
+                div {
+                    background-color: $bg-color;
+                    color: $color-white;
+                    span {
+                        color: $color-white;
+                    }
+                }
+            }
+            .newsletter-form {
+                .input-newsletter {
+                    background-color: $bg-color;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    .footer-bg3 {
+        background-color: $card-bg;
+    }
+    .footer-widget {
+        h3 {
+           color: $color-white;
+        }
+        p {
+            color: $color-white;
+        }
+        .social-link-content {
+            .title {
+                color: $color-white;
+            }
+        }
+        .footer-list {
+            li {
+                a {
+                    color: $color-white;
+                    &:hover {
+                        color: $optional-color-1;
+                    }
+                }
+            }
+        }
+        .footer-list-two {
+            li {
+                color: $color-white;
+                a {
+                    color: $color-white;
+                }
+                &:hover {
+                    a {
+                        color: $optional-color-1;
+                    }
+                }
+            }
+        }
+        .newsletter-form {
+            .form-control {
+                color: $color-white;
+            }
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        .banner-slider-two-content {
+            background-color: $card-bg;
+        }
+    }
+    
+
+}
